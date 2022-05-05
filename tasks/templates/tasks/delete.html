@@ -1,0 +1,43 @@
+{%load static%}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div class="center-column">
+<div class="vstack gap-2 col-md-5 mx-auto">
+<p>Вы точно хотите удалит лист - '{{item}}' ?</p>
+<form method="POST" action="">
+    {%csrf_token%}
+    <button type="submit" class="btn btn-info" name="Update Task"><a class="text-light text-decoration-none"href="{%url 'list'%}">Отмена</a></button>
+    <button type="submit" class="btn btn-info" name="Update Task"><a type="submit" name="Confirm">Удалить</a></button>
+</form>
+</div>
+</div>
+
+<style>
+    body{
+	background-color: #638CB8;
+}
+.vstack {
+	margin: 10px;
+	padding: 20px;
+	background-color: #906abd;
+    border-radius: 3px;
+	color: #fff;
+	font-size: 16px;
+	box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+}
+.center-column{
+	width:600px;
+	margin: 20px auto;
+	padding:20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+}
+.btn-info{
+    color: #fff;
+    background-color: #638CB8;
+    border-color: #638CB8;
+}
+</style>
+

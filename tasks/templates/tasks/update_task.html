@@ -1,0 +1,47 @@
+{%load static%}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+      xmlns="http://www.w3.org/1999/html">
+
+<div class="center-column">
+<div class="vstack gap-2 col-md-5 mx-auto">
+<h5 class="center">Обновить задания</h5>
+<form action="" method="POST">
+    <div class="col-md-0">
+    {%csrf_token%}
+        <input type="{{form.title}}">
+        <label class="form mt-3 mb-3">{{form.complete}} Сделано</label>
+    <button type="submit" class="btn btn-info" name="Update Task">Отправить</button>
+</div>
+</form>
+</div>
+</div>
+
+<style>
+body{
+	background-color: #638CB8;
+}
+.vstack {
+	margin: 10px;
+	padding: 20px;
+	background-color: #906abd;
+    border-radius: 3px;
+	color: #fff;
+	font-size: 16px;
+	box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+}
+.center-column{
+	width:600px;
+	margin: 20px auto;
+	padding:20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+}
+
+.btn-info{
+    color: #fff;
+    background-color: #638CB8;
+    border-color: #638CB8;
+}
+</style>
